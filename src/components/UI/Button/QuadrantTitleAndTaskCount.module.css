@@ -1,0 +1,49 @@
+/* Styling for "QuadrantTitleAndTaskCount.js" (i.e., the `<QuadrantTitleAndTaskCount>` component): */
+.display-handler {
+    display: flex;
+    /* Ensuring adequate spacing between `<label>` and `<div>` elements constituting 
+    `<QuadrantTitleAndTaskCount>` component: */
+    justify-content: space-around;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: bold;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    background-color: #ebebeb;
+}
+
+.display-handler label {
+    padding-top: 0.25rem;
+    width: 75%
+}
+
+.task-count {
+    background-color: #bbb;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+/* Media query that executes styling changes when width of user's screen is at or below 
+600 pixels: */
+@media (max-width: 600px) {
+    .display-handler {
+        padding: .25rem 0;
+    }
+}
+
+/* Media query that executes styling changes when width of user's screen is at or above 
+600 pixels: */
+@media (min-width: 600px) {
+    .task-count {
+        padding-top: 3px;
+    }
+
+    /* Ensuring that, at certain screen widths, label for "Not Urgent, Not Important" 
+    quadrant does not wrap onto two lines: */
+    .display-handler label {
+        font-size: 95%;
+    }
+}

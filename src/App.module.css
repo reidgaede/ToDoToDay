@@ -1,0 +1,99 @@
+/* Styling for "App.js" (i.e., the `<App />` component): */
+#tasks {
+  max-width: 90%;
+  margin: 3rem auto;
+}
+
+#task-form {
+  width: 30rem;
+  max-width: 90%;
+  margin: 3rem auto;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.task-quadrants {
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  grid-row: auto auto;
+  grid-column-gap: 10vw;
+  grid-row-gap: 2.5vw;
+}
+
+.quadrant {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.no-more-tasks {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+/* Styling, via ID selectors, for "interior" of each quadrant of "optimized" 
+to-do list: */
+#important-urgent {
+  border-radius: 10px;
+  background: #e9c3b8;
+}
+
+#urgent-not-important {
+  border-radius: 10px;
+  background: #efdbb9;
+}
+
+#not-urgent-but-important {
+  border-radius: 10px;
+  background: #bbcfe6;
+}
+
+#not-urgent-not-important {
+  border-radius: 10px;
+  background: #a8d9cb;
+}
+
+/* Media query that executes styling changes when width of user's screen is at or 
+below 600 pixels: */
+@media (max-width: 600px) {
+  .quadrant {
+    margin: 1rem auto;
+  }
+  
+  #task-form {
+    padding: 1rem;
+    margin: 1.5rem auto;
+  }
+
+  #tasks {
+    margin: 1.5rem auto;
+  }
+
+  .task-quadrants {
+    font-size: small;
+    display: block;
+  }
+
+  .task-quadrants label {
+    padding: .25rem 0;
+  }
+
+  .no-more-tasks {
+    margin-top: 7.5rem;
+  }
+}
+
+/* Media query that executes styling changes when height of user's screen is at or 
+above 992 pixels: */
+@media (min-height: 992px) {
+  .no-more-tasks {
+    margin-top: 20rem;
+  }
+}
+
+/* Media query that executes styling changes when height of user's screen is at or 
+above 1200 pixels: */
+@media (min-height: 1200px) {
+  .no-more-tasks {
+    margin-top: 30rem;
+  }
+}

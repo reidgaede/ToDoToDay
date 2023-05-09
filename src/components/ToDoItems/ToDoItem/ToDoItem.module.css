@@ -1,0 +1,43 @@
+/* Styling for "ToDoItem.js" (i.e., the `<ToDoItem>` component): */
+.task-item {
+  margin: 1rem 1rem;
+  background: #8b005d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  color: white;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.task-item.important-urgent {
+  background: #a84828;
+}
+
+.task-item.urgent-not-important {
+  background: #b57d15;
+}
+
+.task-item.not-urgent-but-important {
+  background: #093684;
+}
+
+.task-item.not-urgent-not-important {
+  background: #138f2b;
+}
+
+/* Specifying "hover" color-change effects for `<ToDoItem>` instances located 
+in each "to-do quadrant": */
+.task-item.important-urgent:hover {
+  background: #a62e06
+}
+
+.task-item.urgent-not-important:hover {
+  background: #9b6500;
+}
+
+.task-item.not-urgent-but-important:hover {
+  background: #022563;
+}
+
+.task-item.not-urgent-not-important:hover {
+  background: #006915;
+}
